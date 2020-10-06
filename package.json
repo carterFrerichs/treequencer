@@ -1,0 +1,37 @@
+{
+  "name": "treequencer",
+  "version": "1.0.0",
+  "description": "http://algorithmicbotany.org/ https://p5js.org/",
+  "main": "server.js",
+  "scripts": {
+    "serve": "browser-sync start --server --files '*.html, *.css, *.js'",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "carter frerichs",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "nodemon": "^2.0.4",
+    "prettier": "1.19.1",
+    "stylelint": "^11.1.1",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-vscode": "^7.0.0-6"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.756.0",
+    "axios": "^0.20.0",
+    "ccapture.js": "^1.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "gif-capture-canvas": "^1.0.1",
+    "multer": "^1.4.2",
+    "touch-dnd": "^1.2.1",
+    "uuid": "^8.3.0"
+  }
+}
