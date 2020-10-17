@@ -83,7 +83,7 @@ function setup() {
 
   recButton = document.getElementById('record')
 
-  recButton.onclick= function () {
+  recButton.onclick = function () {
     capturer.stop();
     capturer.start();
     isRecording = true;
@@ -136,42 +136,42 @@ function draw() {
 
       let photo;
 
-        reader.onloadend = function () {
+      reader.onloadend = function () {
 
-          let base64 = reader.result;
-          let rule = tree.getRule();
-          rule = rule.replaceAll("[",",");
-          rule = rule.replaceAll("]",",");
-          rule = rule.replaceAll("+","p");
-          rule = rule.replaceAll("-","m");
-          
-          photo = JSON.stringify({ "name": rule+".gif", "uri": base64});
-  
-          console.log(photo)
+        let base64 = reader.result;
+        let rule = tree.getRule();
+        rule = rule.replaceAll("[", ",");
+        rule = rule.replaceAll("]", ",");
+        rule = rule.replaceAll("+", "p");
+        rule = rule.replaceAll("-", "m");
 
-          fetch('/upload', {
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: photo
-          }).then(function (response) {
-            return response;
-          })
+        photo = JSON.stringify({ "name": rule + ".gif", "uri": base64 });
+
+        console.log(photo)
+
+        fetch('/upload', {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+          },
+          body: photo
+        }).then(function (response) {
+          return response;
+        })
           .then(function (result) {
-              console.log(result.status);
-              isRecording = false;
-              console.log("done");
-              gifFrameCount = 0;
+            console.log(result.status);
+            isRecording = false;
+            console.log("done");
+            gifFrameCount = 0;
 
-              // trigger reload
+            // trigger reload
           })
-          .catch (function (error) {
-              console.log('Request failed', error);
+          .catch(function (error) {
+            console.log('Request failed', error);
           });
-        }     
-        
-     });
+      }
+
+    });
 
 
 
@@ -185,7 +185,7 @@ function draw() {
   else {
     recButton.removeAttribute('disabled', true)
   }
-  
+
 
 }
 

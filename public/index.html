@@ -10,12 +10,12 @@
   <script src="./js/gif.worker.js"></script>
 
   <script>
-    var capturer = new CCapture( {
+    var capturer = new CCapture({
       framerate: 60,
       format: 'gif',
       workersPath: './js/',
       verbose: false
-    } );
+    });
   </script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8" />
@@ -62,73 +62,73 @@ align-items: center;">
 
   <body style="font-family: 'Red Rose', cursive; padding: 5px; display:flexbox; width: 835px">
     <div>
-    <div id="class1">
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-      <a href='/index.html' style="padding-right: 30px;">home</a>
-      <a href='/gallery.html' style="padding-right: 30px;">gallery</a>
-      <a href='/about.html' style="padding-right: 30px;">about</a>
-    </nav>
-    <div >
-      <h1>treequencer</h1>
+      <div id="class1">
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+          <a href='/index.html' style="padding-right: 30px;">home</a>
+          <a href='/gallery.html' style="padding-right: 30px;">gallery</a>
+          <a href='/about.html' style="padding-right: 30px;">about</a>
+        </nav>
+        <div>
+          <h1>treequencer</h1>
+        </div>
+        <div id="appHome">
+          <div id="treeRadio">
+            <p style="padding: 5px; font-size:larger">Production String:</p>
+            <input type="radio" id="fir" name="tree" value="0" checked>
+            <label for="first">one</label>
+
+            <input type="radio" id="sec" name="tree" value="1">
+            <label for="second">two</label>
+
+            <input type="radio" id="thi" name="tree" value="2">
+            <label for="third">three</label>
+
+            <input type="radio" id="fou" name="tree" value="3">
+            <label for="fourth">four</label>
+
+            <input type="radio" id="fif" name="tree" value="4">
+            <label for="fifth">five</label>
+
+            <input type="radio" id="six" name="tree" value="5">
+            <label for="sixth">six</label>
+          </div>
+
+
+
+          <ul id="sortable">
+            <li class="ui-state-default">F</li>
+            <li class="ui-state-default">F</li>
+            <li class="ui-state-default">+</li>
+            <li class="ui-state-default">[</li>
+            <li class="ui-state-default">+</li>
+            <li class="ui-state-default">F</li>
+            <li class="ui-state-default">-</li>
+            <li class="ui-state-default">F</li>
+            <li class="ui-state-default">-</li>
+            <li class="ui-state-default">F</li>
+            <li class="ui-state-default">]</li>
+            <li class="ui-state-default">-</li>
+            <li class="ui-state-default">[</li>
+            <li class="ui-state-default">-</li>
+            <li class="ui-state-default">F</li>
+            <li class="ui-state-default">+</li>
+            <li class="ui-state-default">F</li>
+            <li class="ui-state-default">+</li>
+            <li class="ui-state-default">F</li>
+            <li class="ui-state-default">]</li>
+
+          </ul>
+        </div>
+        <div id="class2">
+
+          <script src="sketch.js"></script>
+          <script src="lsystem.js"></script>
+          <button id="record">record</button>
+        </div>
+      </div>
     </div>
-    <div id="appHome">
-    <div id="treeRadio">
-      <p style="padding: 5px; font-size:larger">Production String:</p>
-      <input type="radio" id="fir" name="tree" value="0" checked>
-      <label for="first">one</label>
-
-      <input type="radio" id="sec" name="tree" value="1">
-      <label for="second">two</label>
-
-      <input type="radio" id="thi" name="tree" value="2">
-      <label for="third">three</label>
-
-      <input type="radio" id="fou" name="tree" value="3">
-      <label for="fourth">four</label>
-
-      <input type="radio" id="fif" name="tree" value="4">
-      <label for="fifth">five</label>
-
-      <input type="radio" id="six" name="tree" value="5">
-      <label for="sixth">six</label>
-    </div>
-
-
-
-    <ul id="sortable">
-      <li class="ui-state-default">F</li>
-      <li class="ui-state-default">F</li>
-      <li class="ui-state-default">+</li>
-      <li class="ui-state-default">[</li>
-      <li class="ui-state-default">+</li>
-      <li class="ui-state-default">F</li>
-      <li class="ui-state-default">-</li>
-      <li class="ui-state-default">F</li>
-      <li class="ui-state-default">-</li>
-      <li class="ui-state-default">F</li>
-      <li class="ui-state-default">]</li>
-      <li class="ui-state-default">-</li>
-      <li class="ui-state-default">[</li>
-      <li class="ui-state-default">-</li>
-      <li class="ui-state-default">F</li>
-      <li class="ui-state-default">+</li>
-      <li class="ui-state-default">F</li>
-      <li class="ui-state-default">+</li>
-      <li class="ui-state-default">F</li>
-      <li class="ui-state-default">]</li>
-
-    </ul>
-  </div>
-    <div id="class2">
-
-    <script src="sketch.js"></script>
-    <script src="lsystem.js"></script>
-    <button id="record">record</button>
-  </div>
-  </div>
 </div>
-</div>
-  </body>
+</body>
 </div>
 
 </html>

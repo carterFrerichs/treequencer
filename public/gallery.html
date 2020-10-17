@@ -10,12 +10,12 @@
   <script src="./js/gif.worker.js"></script>
 
   <script>
-    var capturer = new CCapture( {
+    var capturer = new CCapture({
       framerate: 60,
       format: 'gif',
       workersPath: './js/',
       verbose: false
-    } );
+    });
   </script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8" />
@@ -62,37 +62,37 @@
 
   <body style="font-family: 'Red Rose', cursive; padding: 5px; display:flexbox;">
     <div style="align-content: center;">
-    <div id="class1">
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-      <a href='/index.html' style="padding-right: 30px;">home</a>
-      <a href='/gallery.html' style="padding-right: 30px;">gallery</a>
-      <a href='/about.html' style="padding-right: 30px;">about</a>
-    </nav>
-    <div >
-      <h1>treequencer</h1>
-    </div>
-    <div id ="gal"></div>
-    <script type="text/javascript">  
-        fetch('/gallery').then(res=>res.json()).then(res=> {
-            res.keys.forEach(e=>{
-                console.log(e)
-                let img = new Image(400, 400);
-                img.src= `https://treequencer.s3.amazonaws.com/${e}`;
+      <div id="class1">
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+          <a href='/index.html' style="padding-right: 30px;">home</a>
+          <a href='/gallery.html' style="padding-right: 30px;">gallery</a>
+          <a href='/about.html' style="padding-right: 30px;">about</a>
+        </nav>
+        <div>
+          <h1>treequencer</h1>
+        </div>
+        <div id="gal"></div>
+        <script type="text/javascript">
+          fetch('/gallery').then(res => res.json()).then(res => {
+            res.keys.forEach(e => {
+              console.log(e)
+              let img = new Image(400, 400);
+              img.src = `https://treequencer.s3.amazonaws.com/${e}`;
 
-                let name = document.createElement("p");
-                name.innerHTML = e;
+              let name = document.createElement("p");
+              name.innerHTML = e;
 
-                let wrap = document.createElement("div");
-                wrap.append(name);
-                wrap.append(img);
+              let wrap = document.createElement("div");
+              wrap.append(name);
+              wrap.append(img);
 
-                document.getElementById("gal").append(wrap);
+              document.getElementById("gal").append(wrap);
             });
-        }).catch(function (err){console.log(err)});
+          }).catch(function (err) { console.log(err) });
 
 
-    </script>
-</div>
+        </script>
+      </div>
   </body>
 
 

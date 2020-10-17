@@ -36,7 +36,7 @@ app.post('/upload', function (req, res) {
 
     let base64 = req.body.uri;
 
-    const base64Data = new Buffer(base64.replace(/^data:image\/\w+;base64,/, ""), 'base64');
+    const base64Data = new Buffer.from(base64.replace(/^data:image\/\w+;base64,/, ""), 'base64');
     const type = base64.split(';')[0].split('/')[1]
     let params = {
 
@@ -57,15 +57,15 @@ app.post('/upload', function (req, res) {
 
 })
 
-app.get('/gallery', (req, res) =>{
+app.get('/gallery', (req, res) => {
 
 
 
 
-      var params = {
-        Bucket: 'treequencer'    
+    var params = {
+        Bucket: 'treequencer'
     };
-    
+
     listAllKeys();
     function listAllKeys() {
         s3.listObjects(params, function (err, data) {
@@ -78,24 +78,15 @@ app.get('/gallery', (req, res) =>{
                 contents.forEach(function (content) {
                     allKeys.push(content.Key);
                 });
-            res.send(JSON.stringify({"keys":allKeys}));
+                res.send(JSON.stringify({ "keys": allKeys }));
 
-    
+
             }
         });
 
 
     }
 
-//   var bucket = new AWS.S3({params: {Bucket: 'treequencer'},
-// credentials: {accessKeyId: 'AKIA4DLU7IHFYFOPIGCR', secretAccessKey: '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'}});
-//   bucket.listObjects(function (err, data) {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log(data);
-//     }
-//     });
 });
 
 
