@@ -8,6 +8,7 @@
   <script src="https://unpkg.com/p5.touchgui@0.5.2/lib/p5.touchgui.js"></script>
   <script src="CCapture.all.min.js"></script>
   <script src="./js/gif.worker.js"></script>
+  <script src="gif.js"></script>
 
   <script>
     var capturer = new CCapture({
@@ -20,32 +21,6 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8" />
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <style>
-    html {
-      background: #c7c7c7
-    }
-
-    #sortable {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 450px;
-    }
-
-    #sortable li {
-      border-radius: 50px;
-      background: #c7c7c7;
-      box-shadow: 20px 20px 60px #a9a9a9,
-        -20px -20px 60px #e5e5e5;
-      margin: 3px 3px 3px 0;
-      padding: 1px;
-      float: left;
-      width: 100px;
-      height: 90px;
-      font-size: 4em;
-      text-align: center;
-    }
-  </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
@@ -57,21 +32,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<div class="container" style="display: inline; justify-content: center;
-align-items: center;">
+<div class="container">
 
-  <body style="font-family: 'Red Rose', cursive; padding: 5px; display:flexbox; width: 835px">
+  <body>
     <div>
-      <div id="class1">
-        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-          <a href='/index.html' style="padding-right: 30px;">home</a>
-          <a href='/gallery.html' style="padding-right: 30px;">gallery</a>
-          <a href='/about.html' style="padding-right: 30px;">about</a>
+      <div id="header"style="width: 900px; margin: 0 auto;">
+        <nav class="navbar navbar-light">
+          <a href='/index.html' style="margin-right:30px">home</a>
+          <a href='/gallery.html' style="margin-right:30px">gallery</a>
+          <a href='/about.html' style="margin-right:30px">about</a>
         </nav>
-        <div>
-          <h1>treequencer</h1>
-        </div>
-        <div id="appHome">
+      <div>
+      <h1>treequencer</h1>
+      </div>
+
+        <div class="content" style="width: 900px; margin: 0 auto;">
           <div id="treeRadio">
             <p style="padding: 5px; font-size:larger">Production String:</p>
             <input type="radio" id="fir" name="tree" value="0" checked>

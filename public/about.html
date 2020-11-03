@@ -2,76 +2,30 @@
 <html lang="en">
 
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
-  <script src="https://unpkg.com/p5.touchgui@0.5.2/lib/p5.touchgui.js"></script>
-  <script src="CCapture.all.min.js"></script>
-  <script src="./js/gif.worker.js"></script>
 
-  <script>
-    var capturer = new CCapture( {
-      framerate: 60,
-      format: 'gif',
-      workersPath: './js/',
-      verbose: false
-    } );
-  </script>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <style>
-    html {
-      background: #c7c7c7
-    }
-
-    #sortable {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 450px;
-    }
-
-    #sortable li {
-      border-radius: 50px;
-      background: #c7c7c7;
-      box-shadow: 20px 20px 60px #a9a9a9,
-        -20px -20px 60px #e5e5e5;
-      margin: 3px 3px 3px 0;
-      padding: 1px;
-      float: left;
-      width: 100px;
-      height: 90px;
-      font-size: 4em;
-      text-align: center;
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-    $(function () {
-      $("#sortable").sortable();
-      $("#sortable").disableSelection();
-    });
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<div class="container">
 
-  <body style="font-family: 'Red Rose', cursive; padding: 5px; display:flexbox; width: 835px">
+  <body>
     <div>
-    <div id="class1">
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-      <a href='/index.html' style="padding-right: 30px;">home</a>
-      <a href='/gallery.html' style="padding-right: 30px;">gallery</a>
-      <a href='/about.html' style="padding-right: 30px;">about</a>
+    <div style="width: 900px; margin: 0 auto;">
+    <nav class="navbar navbar-light">
+      <a href='/index.html' style="margin-right:30px">home</a>
+      <a href='/gallery.html' style="margin-right:30px">gallery</a>
+      <a href='/about.html' style="margin-right:30px">about</a>
     </nav>
     <div >
       <h1>treequencer</h1>
     </div>
-    <h3 style="width: 66%; font-family: 'Times New Roman', Times, serif;"><i>'An L-system or Lindenmayer system is a parallel rewriting system and a type of formal grammar. An L-system consists of an alphabet of symbols that can be used to make strings, a collection of production rules that expand each symbol into some larger string of symbols, an initial "axiom" string from which to begin construction, and a mechanism for translating the generated strings into geometric structures. L-systems were introduced and developed in 1968 by Aristid Lindenmayer, a Hungarian theoretical biologist and botanist at the University of Utrecht[1]. Lindenmayer used L-systems to describe the behaviour of plant cells and to model the growth processes of plant development. L-systems have also been used to model the morphology of a variety of organisms[2] and can be used to generate self-similar fractals.'</i></h3>
+    <div style="width: 900px; margin: 0 auto;">
+   <h3>A Lindenmayer system (L-system) is a type of formal grammar, consisting of (1) an <i>alphabet</i>, or set of characters, (2) a collection of <i>production rules</i> that are used to derive increasingly long strings from an initial (3) <i>axiom</i>, and (4) a mechanism for interpreting the resulting character string as instructions for the generation of geometric structures.
+    <br><br>
+    treequencer was made with <a href="https://p5js.org/">p5</a> and is indebted to the work documented in <i>The Algorithmic Beauty of Plants</i>, written by Przemyslaw Prusinkiewicz and Aristid Lindenmayer.</h3>
+    <img src="Lindenmayer, Aristid 1925–1989.jpg" alt="Aristid Lindenmayer (1925-1989) holding a flower" style="width: 33%;"> 
+  </div>
   </body>
-</div>
 
 </html>

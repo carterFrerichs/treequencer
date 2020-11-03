@@ -164,7 +164,8 @@ function draw() {
             console.log("done");
             gifFrameCount = 0;
 
-            // trigger reload
+            location.reload();
+            return false;
           })
           .catch(function (error) {
             console.log('Request failed', error);

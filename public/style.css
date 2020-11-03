@@ -1,8 +1,50 @@
-html, body {
-    margin: 0;
-    padding: 0;
-  }
-  canvas {
-    display: block;
-  }
+html {
+  background: #c7c7c7
+}
+
+body{
+  font-family: 'Red Rose', cursive; 
+  padding: 5px;
   
+}
+
+#sortable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 450px;
+}
+
+#sortable li {
+  border-radius: 50px;
+  background: #c7c7c7;
+  box-shadow: 20px 20px 60px #a9a9a9,
+    -20px -20px 60px #e5e5e5;
+  margin: 3px 3px 3px 0;
+  padding: 1px;
+  float: left;
+  width: 100px;
+  height: 90px;
+  font-size: 4em;
+  text-align: center;
+}
+
+nav{
+  background-color: #e3f2fd;
+}
+/* 
+a {
+  padding-right: 30px;
+} */
+
+h3 {
+  font-family: 'Arial Narrow';
+  letter-spacing: 1px;
+  font-weight: 100;
+  width: 80%;
+}
+
+#container{
+  width: 100%;
+}
+
