@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "serve": "browser-sync start --server --files '*.html, *.css, *.js'",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "carter frerichs",
