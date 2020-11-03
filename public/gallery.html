@@ -11,9 +11,9 @@
     <div>
       <div id="class1" style="width: 900px; margin: 0 auto;">
         <nav class="navbar navbar-light">
-          <a href='/index.html' style="margin-right:30px">home</a>
-          <a href='/gallery.html' style="margin-right:30px">gallery</a>
-          <a href='/about.html' style="margin-right:30px">about</a>
+          <a href='/index.html' style="margin-right:30px; text-decoration: none; color: indigo">home</a>
+          <a href='/gallery.html' style="margin-right:30px; text-decoration: none; color: indigo">gallery</a>
+          <a href='/about.html' style="margin-right:30px; text-decoration: none; color: indigo">about</a>
         </nav>
         <div>
           <h1>treequencer</h1>
@@ -27,12 +27,12 @@
               let img = new Image(400, 400);
               img.src = `https://treequencer.s3.amazonaws.com/${e}`;
 
-              let name = document.createElement("h1");
-              name.innerHTML = e;
+              let title = document.createElement("h1");
+              title.innerHTML = e;
 
               let wrap = document.createElement("div");
               wrap.style.marginLeft = "100px";
-              wrap.append(name);
+              wrap.append(title);
               wrap.append(img);
 
 
