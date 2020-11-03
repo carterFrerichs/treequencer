@@ -18,7 +18,10 @@
         <div>
           <h1>treequencer</h1>
         </div>
+        <button id="scroll" onclick="location.reload();" style="position: fixed; box-shadow: 3px 3px 5px black; margin-left: 700px;">^</button>
+
         <div id="gal" style="width: 900px; margin: 0 auto;"></div>
+
 
         <script type="text/javascript">
           fetch('/gallery').then(res => res.json()).then(res => {
