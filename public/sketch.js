@@ -75,6 +75,7 @@ $(document).ready(function () {
 });
 
 let recButton;
+
 function setup() {
   let p5Canvas = createCanvas(400, 400);
   canvas = p5Canvas.canvas;
@@ -84,11 +85,11 @@ function setup() {
   recButton = document.getElementById('record')
 
   recButton.onclick = function () {
-    capturer.stop();
     capturer.start();
     isRecording = true;
     recButton.setAttribute('disabled', true);
   };
+
 
 
 

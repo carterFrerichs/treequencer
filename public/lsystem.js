@@ -111,43 +111,9 @@ class Lsystem {
       translate(endX, endY);
       this.len *= 0.67;
 
-      // console.log(this.tree);
 
     }
-    // console.log(this.tree);
   }
-
-  //   this.branch = {
-  //   constructor(begin, end){
-  //     this.begin = begin;
-  //     this.end = end;
-  //     this.finished=false;
-  //   }
-
-  //   show(){
-  //     stroke(51);
-  //     line(this.begin.x, this.begin.y, 
-  //          this.end.x, this.end.y);
-  //   }
-
-  //   branch(){
-  //     let direction = p5.Vector.sub(this.end, this.begin);
-
-  //     direction.rotate(PI/6);
-  //     direction.mult(0.67);
-  //     let rightEnd = p5.Vector.add(this.end, direction);
-  //     direction.rotate(-PI/3);
-  //     let leftEnd = p5.Vector.add(this.end, direction);
-  //     let right = new Branch(this.end, rightEnd);
-  //     let left = new Branch(this.end, leftEnd); 
-
-  //     return [right, left];
-  //   }
-
-
-
-  // }
-
 
 
 }
