@@ -16,6 +16,21 @@ $(document).ready(function () {
 
   ul = document.getElementById('sortable');
 
+  function innerTextToClass(character){
+    switch(character){
+      case 'F':
+        return 'F';
+      case '-':
+        return 'minus';
+      case '+':
+        return 'plus';
+      case '[':
+        return 'open'
+      case ']':
+        return 'close';
+    }
+  }
+
   $('#treeRadio').change(function () {
     selected_value = $("input[name='tree']:checked").val();
     while (ul.hasChildNodes()) {
@@ -27,6 +42,8 @@ $(document).ready(function () {
           let node = document.createElement("li");                 // Create a <li> node
           let textnode = document.createTextNode(`${i}`);         // Create a text node
           node.appendChild(textnode);
+          node.classList.add("ui-state-default");
+          node.classList.add(innerTextToClass(i));
           ul.appendChild(node);
         }
         break;
@@ -35,6 +52,8 @@ $(document).ready(function () {
           let node = document.createElement("li");                 // Create a <li> node
           let textnode = document.createTextNode(`${i}`);         // Create a text node
           node.appendChild(textnode);
+          node.classList.add("ui-state-default");
+          node.classList.add(`${i}`);
           ul.appendChild(node);
         }
         break;
@@ -43,6 +62,8 @@ $(document).ready(function () {
           let node = document.createElement("li");                 // Create a <li> node
           let textnode = document.createTextNode(`${i}`);         // Create a text node
           node.appendChild(textnode);
+          node.classList.add("ui-state-default");
+          node.classList.add(`${i}`);
           ul.appendChild(node);
         }
         break;
@@ -51,6 +72,8 @@ $(document).ready(function () {
           let node = document.createElement("li");                 // Create a <li> node
           let textnode = document.createTextNode(`${i}`);         // Create a text node
           node.appendChild(textnode);
+          node.classList.add("ui-state-default");
+          node.classList.add(`${i}`);
           ul.appendChild(node);
         }
         break;
@@ -59,6 +82,8 @@ $(document).ready(function () {
           let node = document.createElement("li");
           let textnode = document.createTextNode(`${i}`);
           node.appendChild(textnode);
+          node.classList.add("ui-state-default");
+          node.classList.add(`${i}`);
           ul.appendChild(node);
         }
         break;
@@ -67,6 +92,8 @@ $(document).ready(function () {
           let node = document.createElement("li");
           let textnode = document.createTextNode(`${i}`);
           node.appendChild(textnode);
+          node.classList.add("ui-state-default");
+          node.classList.add(`${i}`);
           ul.appendChild(node);
         }
         break;

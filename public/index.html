@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
@@ -9,6 +10,7 @@
   <script src="CCapture.all.min.js"></script>
   <script src="./js/gif.worker.js"></script>
   <script src="gif.js"></script>
+
 
   <script>
     var capturer = new CCapture({
@@ -68,38 +70,59 @@
             <label for="sixth">six</label>
           </div>
 
+          <div>
+          
+            <button id='addF' style='display: fixed; margin-left: 20px;' onclick="addF()">Add F</button>
+            <script>
+              function addF(){
+                let listItem = document.createElement('li');
+                let text = document.createTextNode('F');
+                listItem.appendChild(text);
+                listItem.classList.add("ui-state-default");
+                listItem.classList.add("F");
+                document.getElementById('sortable').appendChild(listItem);              
+                }
+            </script>
+            
+            <button id='subF' style='display: fixed; margin-left: 20px;' onclick="subF()">Sub F</button>
+            <script>
+              function subF(){
+                document.querySelector('.F').remove
+              };
+            </script>
 
+          </div>
 
           <ul id="sortable">
-            <li class="ui-state-default">F</li>
-            <li class="ui-state-default">F</li>
-            <li class="ui-state-default">+</li>
-            <li class="ui-state-default">[</li>
-            <li class="ui-state-default">+</li>
-            <li class="ui-state-default">F</li>
-            <li class="ui-state-default">-</li>
-            <li class="ui-state-default">F</li>
-            <li class="ui-state-default">-</li>
-            <li class="ui-state-default">F</li>
-            <li class="ui-state-default">]</li>
-            <li class="ui-state-default">-</li>
-            <li class="ui-state-default">[</li>
-            <li class="ui-state-default">-</li>
-            <li class="ui-state-default">F</li>
-            <li class="ui-state-default">+</li>
-            <li class="ui-state-default">F</li>
-            <li class="ui-state-default">+</li>
-            <li class="ui-state-default">F</li>
-            <li class="ui-state-default">]</li>
+            <li class="ui-state-default F">F</li>
+            <li class="ui-state-default F">F</li>
+            <li class="ui-state-default plus">+</li>
+            <li class="ui-state-default open">[</li>
+            <li class="ui-state-default plus">+</li>
+            <li class="ui-state-default F">F</li>
+            <li class="ui-state-default minus">-</li>
+            <li class="ui-state-default F">F</li>
+            <li class="ui-state-default minus">-</li>
+            <li class="ui-state-default F">F</li>
+            <li class="ui-state-default close">]</li>
+            <li class="ui-state-default minus">-</li>
+            <li class="ui-state-default open">[</li>
+            <li class="ui-state-default minus">-</li>
+            <li class="ui-state-default F">F</li>
+            <li class="ui-state-default plus">+</li>
+            <li class="ui-state-default F">F</li>
+            <li class="ui-state-default plus">+</li>
+            <li class="ui-state-default F">F</li>
+            <li class="ui-state-default close">]</li>
 
           </ul>
         </div>
         <div id="class2">
-
           <script src="sketch.js"></script>
           <script src="lsystem.js"></script>
-          <button id="record">record</button>
+          <button id="record">REC</button>
         </div>
+
       </div>
     </div>
 </div>
