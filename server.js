@@ -63,7 +63,7 @@ app.get('/gallery', (req, res) => {
 
 
     var params = {
-        Bucket: 'treequencer'
+        Bucket: process.env.AWS_BUCKET_NAME
     };
 
     listAllKeys();
