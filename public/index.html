@@ -48,7 +48,7 @@
       <h1>treequencer</h1>
       </div>
 
-        <div class="content" style="width: 900px; margin: 0 auto;">
+        <div class="container" style="width: 900px; margin: 0 auto;">
           <div id="treeRadio">
             <p style="padding: 5px; font-size:larger">Production String:</p>
             <input type="radio" id="fir" name="tree" value="0" checked>
@@ -70,9 +70,9 @@
             <label for="sixth">six</label>
           </div>
 
-          <div>
-          
-            <button id='addF' style='display: fixed; margin-left: 20px;' onclick="addF()">Add F</button>
+          <div style="display: flex; margin-top: 5px;">
+          <div style="width: 75px;">
+            <button class='changeString' id='addF' style='display: fixed; margin-left: 20px;' onclick="addF()">Add F</button>
             <script>
               function addF(){
                 let listItem = document.createElement('li');
@@ -87,10 +87,94 @@
             <button id='subF' style='display: fixed; margin-left: 20px;' onclick="subF()">Sub F</button>
             <script>
               function subF(){
-                document.querySelector('.F').remove
+                document.querySelector('.F').remove();
               };
             </script>
+            </div>
 
+            <div style = "width: 75px;">
+            <button id='addPlus' style='display: fixed; margin-left: 20px;' onclick="addPlus()">Add +</button>
+            <script>
+              function addPlus(){
+                let listItem = document.createElement('li');
+                let text = document.createTextNode('+');
+                listItem.appendChild(text);
+                listItem.classList.add("ui-state-default");
+                listItem.classList.add("plus");
+                document.getElementById('sortable').appendChild(listItem);              
+                }
+            </script>
+            
+            <button class='changeString' id='subPlus' style='display: fixed; margin-left: 20px;' onclick="subPlus()">Sub +</button>
+            <script>
+              function subPlus(){
+                document.querySelector('.plus').remove();
+              };
+            </script>
+          </div>
+
+            <div style = "width: 75px;">
+            <button id='addMinus' style='display: fixed; margin-left: 20px;' onclick="addMinus()">Add -</button>
+            <script>
+              function addMinus(){
+                let listItem = document.createElement('li');
+                let text = document.createTextNode('-');
+                listItem.appendChild(text);
+                listItem.classList.add("ui-state-default");
+                listItem.classList.add("minus");
+                document.getElementById('sortable').appendChild(listItem);              
+                }
+            </script>
+            
+            <button class='changeString' id='subMinus' style='display: fixed; margin-left: 20px;' onclick="subMinus()">Sub -</button>
+            <script>
+              function subMinus(){
+                document.querySelector('.minus').remove();
+              };
+            </script>
+          </div>
+
+            <div style = "width: 75px;">
+            <button id='addOpen' style='display: fixed; margin-left: 20px;' onclick="addOpen()">Add [</button>
+            <script>
+              function addOpen(){
+                let listItem = document.createElement('li');
+                let text = document.createTextNode('[');
+                listItem.appendChild(text);
+                listItem.classList.add("ui-state-default");
+                listItem.classList.add("open");
+                document.getElementById('sortable').appendChild(listItem);              
+                }
+            </script>
+            
+            <button class='changeString' id='subOpen' style='display: fixed; margin-left: 20px;' onclick="subOpen()">Sub [</button>
+            <script>
+              function subOpen(){
+                document.querySelector('.open').remove();
+              };
+            </script>
+          </div>
+
+          <div style = "width: 75px;">
+            <button id='addClose' style='display: fixed; margin-left: 20px;' onclick="addClose()">Add ]</button>
+            <script>
+              function addClose(){
+                let listItem = document.createElement('li');
+                let text = document.createTextNode(']');
+                listItem.appendChild(text);
+                listItem.classList.add("ui-state-default");
+                listItem.classList.add("close");
+                document.getElementById('sortable').appendChild(listItem);              
+                }
+            </script>
+            
+            <button class='changeString' id='subClose' style='display: fixed; margin-left: 20px;' onclick="subClose()">Sub ]</button>
+            <script>
+              function subClose(){
+                document.querySelector('.close').remove();
+              };
+            </script>
+          </div>
           </div>
 
           <ul id="sortable">
@@ -117,10 +201,10 @@
 
           </ul>
         </div>
-        <div id="class2">
+        <div id="p5Container">
           <script src="sketch.js"></script>
           <script src="lsystem.js"></script>
-          <button id="record">REC</button>
+          <button id="record">record</button>
         </div>
 
       </div>
