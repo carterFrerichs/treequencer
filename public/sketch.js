@@ -29,7 +29,7 @@ $(document).ready(function () {
       case ']':
         return 'close';
     }
-  }
+  };
 
   $('#treeRadio').change(function () {
     selected_value = $("input[name='tree']:checked").val();
@@ -53,7 +53,7 @@ $(document).ready(function () {
           let textnode = document.createTextNode(`${i}`);         // Create a text node
           node.appendChild(textnode);
           node.classList.add("ui-state-default");
-          node.classList.add(`${i}`);
+          node.classList.add(innerTextToClass(i));
           ul.appendChild(node);
         }
         break;
@@ -63,7 +63,7 @@ $(document).ready(function () {
           let textnode = document.createTextNode(`${i}`);         // Create a text node
           node.appendChild(textnode);
           node.classList.add("ui-state-default");
-          node.classList.add(`${i}`);
+          node.classList.add(innerTextToClass(i));
           ul.appendChild(node);
         }
         break;
@@ -73,7 +73,7 @@ $(document).ready(function () {
           let textnode = document.createTextNode(`${i}`);         // Create a text node
           node.appendChild(textnode);
           node.classList.add("ui-state-default");
-          node.classList.add(`${i}`);
+          node.classList.add(innerTextToClass(i));
           ul.appendChild(node);
         }
         break;
@@ -83,7 +83,7 @@ $(document).ready(function () {
           let textnode = document.createTextNode(`${i}`);
           node.appendChild(textnode);
           node.classList.add("ui-state-default");
-          node.classList.add(`${i}`);
+          node.classList.add(innerTextToClass(i));
           ul.appendChild(node);
         }
         break;
@@ -93,7 +93,7 @@ $(document).ready(function () {
           let textnode = document.createTextNode(`${i}`);
           node.appendChild(textnode);
           node.classList.add("ui-state-default");
-          node.classList.add(`${i}`);
+          node.classList.add(innerTextToClass(i));
           ul.appendChild(node);
         }
         break;
