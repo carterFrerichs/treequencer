@@ -59,9 +59,6 @@ app.post('/upload', function (req, res) {
 
 app.get('/gallery', (req, res) => {
 
-
-
-
     var params = {
         Bucket: process.env.AWS_BUCKET_NAME
     };
@@ -80,13 +77,9 @@ app.get('/gallery', (req, res) => {
                 });
                 res.send(JSON.stringify({ "keys": allKeys }));
 
-
             }
         });
-
-
     }
-
 });
 
 
