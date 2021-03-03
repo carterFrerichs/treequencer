@@ -1,5 +1,5 @@
 html {
-  background: #c7c7c7
+  background: #c7c7c7;
 }
 
 body{
@@ -32,10 +32,7 @@ body{
 nav{
   background-color: #e3f2fd;
 }
-/* 
-a {
-  padding-right: 30px;
-} */
+
 
 h3 {
   font-family: 'Arial Narrow';

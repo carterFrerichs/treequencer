@@ -62,8 +62,6 @@ app.get('/gallery', (req, res) => {
     var params = {
         Bucket: process.env.AWS_BUCKET_NAME
     };
-
-    listAllKeys();
     function listAllKeys() {
         s3.listObjects(params, function (err, data) {
             if (err) {
@@ -80,6 +78,8 @@ app.get('/gallery', (req, res) => {
             }
         });
     }
+    listAllKeys();
+
 });
 
 

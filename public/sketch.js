@@ -168,8 +168,8 @@ function draw() {
 
         let base64 = reader.result;
         let rule = tree.getRule();
-        rule = rule.replaceAll("[", ",");
-        rule = rule.replaceAll("]", ",");
+        rule = rule.replaceAll("[", "o");
+        rule = rule.replaceAll("]", "c");
         rule = rule.replaceAll("+", "p");
         rule = rule.replaceAll("-", "m");
 
